@@ -21,4 +21,4 @@ sudo make install
 #echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf
 sudo ldconfig
 #export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
-#mkdir -p ~/tmp && mv /tmp/opencv3_installer ~/tmp/
+mkdir -p ~/tmp && mv /tmp/opencv3_installer ~/tmp/
