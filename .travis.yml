@@ -1,0 +1,25 @@
+os: linux
+sudo: required
+dist: trusty
+language: generic
+cache : 
+  - apt
+
+branches: 
+  only: 
+    - master
+    - dev
+
+env:
+  global:
+    - HOME=/home/travis
+
+before_script:
+  - sudo apt-get update -qq
+  - sudo apt-get upgrade -qq
+  - rsync -av ./ ~/
+
+script :
+  - ./opencv_install.sh
+  - ./opencv_test.sh
+
