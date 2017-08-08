@@ -20,6 +20,7 @@ before_install:
   - rsync -av ./ ~/
 
 script :
+  - export PATH=/usr/bin:$PATH
   - ./opencv_install.sh
   - ./opencv_test.sh
 
