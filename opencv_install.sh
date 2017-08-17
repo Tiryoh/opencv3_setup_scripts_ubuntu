@@ -2,13 +2,13 @@
 
 OPENCV_VER=3.2.0
 
-sudo apt update
+sudo apt-get update
 # compiler
-sudo apt install -y build-essential
+sudo apt-get install -y build-essential
 # required
-sudo apt install -y zip cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install -y zip cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 # optional
-sudo apt install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+sudo apt-get install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 mkdir -p /tmp/opencv3_installer && cd /tmp/opencv3_installer
 wget https://github.com/opencv/opencv/archive/${OPENCV_VER}.zip -O opencv${OPENCV_VER}.zip
 unzip opencv${OPENCV_VER}.zip
