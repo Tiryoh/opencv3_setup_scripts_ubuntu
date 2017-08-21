@@ -33,3 +33,5 @@ script:
   - kcov coverage opencv_test.sh || ./opencv_test.sh
 after_success:
   - cd ~/ && bash <(curl -s https://codecov.io/bash) || { pwd; find ~/coverage; }
+after_failure:
+  - cd ~/ && pwd && find ./
