@@ -5,6 +5,12 @@ OpenCV3 setup scripts for GNU/Linux Ubuntu
 
 ## Installation
 
+### Simple Installation
+
+```
+curl -SsfL https://git.io/opencv3-installer | sh
+```
+
 ### Manual Installation
 
 First, download this repository.

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+pwd | grep -F 'opencv3_setup' && exit 0
+ls | grep -F 'opencv3_setup' && exit 0
+git clone https://github.com/Tiryoh/opencv3_setup_scripts_ubuntu.git
+cd opencv3_setup_scripts_ubuntu
+./opencv_install.sh
+./opencv_test.sh
