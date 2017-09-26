@@ -14,7 +14,7 @@ wget https://github.com/opencv/opencv/archive/${OPENCV_VER}.zip -O opencv${OPENC
 unzip opencv${OPENCV_VER}.zip
 wget https://github.com/opencv/opencv_contrib/archive/${OPENCV_VER}.zip -O opencv_contrib${OPENCV_VER}.zip
 unzip opencv_contrib${OPENCV_VER}.zip
-cd /tmp/opencv3_installer/opencv-${OPENCV_VER} && mkdir build && cd build
+mkdir -p /tmp/opencv3_installer/opencv-${OPENCV_VER}/build && cd /tmp/opencv3_installer/opencv-${OPENCV_VER}/build
 cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-${OPENCV_VER}/modules  -DWITH_TBB=ON -DWITH_V4L=ON -DWITH_OPENGL=ON ..
 make -j4
 sudo make install
