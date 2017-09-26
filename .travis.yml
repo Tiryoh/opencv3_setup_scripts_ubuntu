@@ -29,8 +29,10 @@ before_script:
   - mkdir -p ~/coverage
   - cd ~/ && ls
 script:
-  - kcov coverage opencv_install.sh || ./opencv_install.sh
-  - kcov coverage opencv_test.sh || ./opencv_test.sh
+  # - kcov coverage opencv_install.sh || ./opencv_install.sh
+  # - kcov coverage opencv_test.sh || ./opencv_test.sh
+  - ./opencv_install.sh
+  - ./opencv_test.sh
 after_success:
   - cd ~/ && bash <(curl -s https://codecov.io/bash) || { pwd; find ~/coverage; }
 after_failure:
