@@ -2,6 +2,8 @@
 
 OPENCV_VER=3.2.0
 WGET_TIMEOUT=60
+MAKE_PARRALEL=2
+[ $(free -m | grep 'Mem' | awk '{if ($2 > 1000) print $2}') ] || MAKE_PARRALEL=4
 
 sudo apt-get update
 # compiler
@@ -17,7 +19,7 @@ wget --timeout ${WGET_TIMEOUT} https://github.com/opencv/opencv_contrib/archive/
 unzip opencv_contrib${OPENCV_VER}.zip
 mkdir -p /tmp/opencv3_installer/opencv-${OPENCV_VER}/build && cd /tmp/opencv3_installer/opencv-${OPENCV_VER}/build
 cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-${OPENCV_VER}/modules  -DWITH_TBB=ON -DWITH_V4L=ON -DWITH_OPENGL=ON ..
-make -j4
+make -j${MAKE_PARRALEL}
 sudo make install
 #echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf
 sudo ldconfig
