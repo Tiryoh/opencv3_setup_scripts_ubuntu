@@ -2,8 +2,8 @@
 
 OPENCV_VER=3.2.0
 WGET_TIMEOUT=60
-MAKE_PARALLEL=2
-[ $(free -m | grep 'Mem' | awk '{if ($2 > 1000) print $2}') ] && MAKE_PARALLEL=4
+MAKE_PARALLEL=1
+[ $(free -m | grep 'Mem' | awk '{if ($2 > 1000) print $2}') ] && MAKE_PARALLEL=$(grep -c processor /proc/cpuinfo 2>/dev/null)
 
 sudo apt-get update
 # compiler

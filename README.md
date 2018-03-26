@@ -44,3 +44,4 @@ Unless attributed otherwise, everything is under the MIT license.
 * http://docs.opencv.org/3.2.0/d7/d9f/tutorial_linux_install.html
 * http://thr3a.hatenablog.com/entry/20160911/1473524714
 * https://github.com/atinfinity/lab/wiki/Linux%E7%92%B0%E5%A2%83%E3%81%A7%E3%81%AEOpenCV%E3%83%93%E3%83%AB%E3%83%89#ubuntu16.04
+* http://d.hatena.ne.jp/embedded/20140829/p1
